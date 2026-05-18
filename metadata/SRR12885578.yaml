@@ -1,0 +1,34 @@
+accession:
+  run: SRR12885578
+  experiment: SRX9351321
+  biosample: SAMN16533637
+  bioproject: PRJNA670202
+  study: SRP288187
+
+dataset:
+  title: "PacBio sequel sequencing of Chlamydomonas reinhardtii transcriptome library"
+  organism: "Chlamydomonas reinhardtii"
+
+sequencing:
+  platform: "PacBio Sequel II"
+  strategy: "RNA-Seq"
+  source: "TRANSCRIPTOMIC"
+  selection: "cDNA"
+  layout: "SINGLE"
+
+data:
+  spots: 92023005
+  bases: 265000000000
+  size_gb: 62.6
+
+download:
+  status: "downloading"
+  local_path: "/mnt/d/Ibnu/Lab Stay/SRR12885578"
+
+processing:
+  adapters_removed: "unknown"
+  quality_trimmed: "unknown"
+  aligned: false
+
+notes:
+  - "PacBio long-read transcriptomic dataset"
