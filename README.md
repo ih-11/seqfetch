@@ -256,6 +256,7 @@ Always inspect accession metadata before large downloads.
 
 Planned improvements include:
 
+- specialized docs (e.g illumina, nanopore, scRNA-seq, Ribo-seq)
 - automated metadata extraction from SRA/ENA
 - QC report integration
 - adapter detection tracking
