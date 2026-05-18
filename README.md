@@ -182,6 +182,13 @@ gzip output_dir/*.fastq
 SRRXXXXXXX \
 "/path/to/output"
 ```
+---
+
+## Script Parameters
+
+```bash
+./scripts/download_sra.sh ACCESSION OUTDIR [THREADS] [MAX_SIZE]
+```
 
 ---
 
@@ -198,6 +205,23 @@ Check available storage before conversion:
 
 ```
 df -h
+```
+
+---
+
+## Monitor Download Size
+
+Check current download size during active downloads:
+
+```bash
+du -sh "/mnt/d/Ibnu/Lab Stay/SRR12885578"
+du -sh "/mnt/d/Ibnu/Lab Stay/SRR12880040"
+```
+
+For continuous monitoring:
+
+```bash
+watch -n 5 'du -sh .'
 ```
 
 ---

@@ -1,0 +1,3 @@
+run	experiment	biosample	bioproject	organism	platform	layout	size_gb	status	local_path
+SRR12885578	SRX9351321	SAMN16533637	PRJNA670202	Chlamydomonas reinhardtii	PacBio Sequel II	SINGLE	62.6	downloading	/mnt/d/Ibnu/Lab Stay/SRR12885578
+SRR12880040	SRX9346008	SAMN16519552	PRJNA670202	Chlamydomonas reinhardtii	PacBio Sequel II	SINGLE	50.3	downloading	/mnt/d/Ibnu/Lab Stay/SRR12880040
