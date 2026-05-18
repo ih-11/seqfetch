@@ -1,0 +1,18 @@
+# sequencing files
+*.sra
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+
+# temporary/cache
+tmp/
+.cache/
+
+# logs
+*.log
+
+# system files
+.DS_Store
