@@ -8,9 +8,19 @@ accession:
 dataset:
   title: "PacBio sequel sequencing of Chlamydomonas reinhardtii transcriptome library"
   organism: "Chlamydomonas reinhardtii"
+  species: "Chlamydomonas reinhardtii"
+  data_type: "long-read transcriptome"
+  source_database: "NCBI SRA"
+
+sample:
+  name: "PBKC"
+  condition: "unknown"
+  replicate: "unknown"
+  note: "Sample label preserved from current metadata; biological meaning not yet curated"
 
 sequencing:
   platform: "PacBio Sequel II"
+  technology: "PacBio SMRT"
   strategy: "RNA-Seq"
   source: "TRANSCRIPTOMIC"
   selection: "cDNA"
@@ -20,15 +30,41 @@ data:
   spots: 92023005
   bases: 265000000000
   size_gb: 62.6
+  archive_format: "BAM"
+  sra_type: "Database"
+  sra_schema: "NCBI:align:db:alignment_sorted#1.3"
 
-download:
-  status: "downloading"
-  local_path: "/mnt/d/Ibnu/Lab Stay/SRR12885578"
+storage:
+  local:
+    downloaded: true
+    path: "/mnt/d/Ibnu/Lab Stay/SRR12885578/SRR12885578/SRR12885578.sra"
+  server:
+    transferred: true
+    host: "lightning"
+    path: "/mnt/data1/chlamydomonas_pacbio/SRR12885578/raw_sra/SRR12885578.sra"
+  transfer:
+    method: "rsync"
+    completed: true
 
 processing:
+  validated: "unknown"
+  fastq_tested: true
+  fastq_extracted: false
+  fastq_path: "/mnt/data1/chlamydomonas_pacbio/SRR12885578/fastq"
   adapters_removed: "unknown"
   quality_trimmed: "unknown"
   aligned: false
 
+analysis_context:
+  intended_use:
+    - "alternative splicing analysis"
+    - "long-read transcriptome analysis"
+    - "future benchmarking"
+  reference_expected: "Chlamydomonas reinhardtii CC-4532 reference genome"
+
 notes:
   - "PacBio long-read transcriptomic dataset"
+  - "Downloaded locally and transferred to lightning server"
+  - "SRA archive uses BAM alignment schema"
+  - "Small FASTQ extraction test was successful"
+  - "Full FASTQ extraction has not been performed yet"
