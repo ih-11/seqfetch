@@ -24,7 +24,7 @@ seqfetch/
 ├── metadata/     curated YAML metadata for sequencing runs
 ├── scripts/      reusable download and processing scripts
 ├── envs/         conda environment files
-├── docs/         additional documentation and logs
+├── docs/         workflow notes and additional documentation
 └── qc/           quality control outputs
 ```
 
@@ -224,6 +224,37 @@ For continuous monitoring:
 watch -n 5 'du -sh .'
 ```
 
+## Metadata Tracking
+
+Each sequencing run is tracked using an accession-centered YAML file:
+
+```text
+metadata/
+├── SRR12885578.yaml
+├── SRR12880040.yaml
+└── ...
+```
+
+Metadata files may contain:
+
+- accession hierarchy
+- sequencing platform information
+- dataset size and schema information
+- local/server storage paths
+- transfer status
+- FASTQ extraction state
+- preprocessing state
+- analysis context and notes
+
+This design allows flexible tracking across different sequencing technologies such as:
+
+- Illumina
+- PacBio
+- Nanopore
+- Iso-Seq
+- Ribo-seq
+- scRNA-seq
+
 ---
 
 ## Long-Read Dataset Notes
@@ -237,6 +268,55 @@ PacBio and Nanopore accessions may:
 SRA archival format does not necessarily indicate whether raw reads are unavailable. In many cases, FASTQ reads can still be extracted successfully using SRA Toolkit.
 
 Always inspect accession metadata before large downloads.
+
+## Server-Side Long-Read Workflow
+
+Large long-read datasets are typically transferred to a dedicated analysis server before full FASTQ extraction.
+
+Example organization:
+
+```text
+/mnt/data1/chlamydomonas_pacbio/
+├── SRR12880040/
+│   ├── raw_sra/
+│   └── fastq/
+└── SRR12885578/
+    ├── raw_sra/
+    └── fastq/
+```
+
+Recommended separation:
+
+- `raw_sra/`
+  - immutable archived SRA objects
+
+- `fastq/`
+  - extracted FASTQ files
+  - compressed FASTQ outputs
+  - downstream preprocessing
+
+This separation helps preserve original downloaded archives while keeping preprocessing outputs organized.
+
+---
+
+## Safe Compression for Large FASTQ Files
+
+Large FASTQ files may require long compression times.
+
+For remote servers, background compression is recommended:
+
+```bash
+nohup gzip sample.fastq > gzip.log 2>&1 &
+```
+
+This allows compression to continue safely even if the SSH session disconnects.
+
+Monitor compression progress:
+
+```bash
+ps aux | grep gzip
+ls -lh
+```
 
 ---
 
