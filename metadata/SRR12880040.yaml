@@ -49,8 +49,9 @@ storage:
 processing:
   validated: "unknown"
   fastq_tested: true
-  fastq_extracted: false
-  fastq_path: "/mnt/data1/chlamydomonas_pacbio/SRR12880040/fastq"
+  fastq_extracted: true
+  fastq_gz_ready: true
+  fastq_path: "/mnt/data1/chlamydomonas_pacbio/SRR12880040/fastq/SRR12880040.fastq.gz"
   adapters_removed: "unknown"
   quality_trimmed: "unknown"
   aligned: false
