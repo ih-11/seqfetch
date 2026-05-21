@@ -68,4 +68,5 @@ notes:
   - "Downloaded locally and transferred to lightning server"
   - "SRA archive uses BAM alignment schema"
   - "Small FASTQ extraction test was successful"
-  - "Full FASTQ extraction has not been performed yet"
+  - "Full FASTQ extraction completed"
+  - "FASTQ compressed to FASTQ.GZ and ready for downstream analysis"
