@@ -1,0 +1,56 @@
+accession:
+  run: SRR25120043
+  experiment: SRX20871891
+  biosample: SAMN36278254
+  bioproject: PRJNA990964
+  study: SRP447248
+
+dataset:
+  title: "RNA-Seq Shoots replicate 1"
+  organism: "Arabidopsis thaliana"
+  species: "Arabidopsis thaliana"
+  tissue: "shoot"
+  replicate: 1
+  source_database: "NCBI SRA"
+
+sequencing:
+  assay: "RNA-seq"
+  platform: "Illumina HiSeq 2500"
+  strategy: "RNA-Seq"
+  source: "TRANSCRIPTOMIC"
+  selection: "cDNA"
+  layout: "SINGLE"
+  read_length: 101
+
+data:
+  spots: 44650350
+  bases: 4509685350
+  size_mb: 2596
+  original_run: true
+  mapping_run: false
+
+pairing:
+  paired_riboseq: "SRR25120039"
+
+storage:
+  local:
+    downloaded: false
+    path: null
+  server:
+    transferred: false
+    host: "lightning"
+    path: null
+
+processing:
+  validated: false
+  fastq_tested: false
+  fastq_extracted: false
+  fastq_gz_ready: false
+  adapters_removed: "unknown"
+  quality_trimmed: "unknown"
+  aligned: false
+
+notes:
+  - "Shoot RNA-seq replicate 1"
+  - "Original sequencing run, not mapping-derived run"
+  - "Paired with Ribo-seq replicate 1"
