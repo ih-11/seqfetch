@@ -34,18 +34,18 @@ pairing:
 
 storage:
   local:
-    downloaded: false
-    path: null
+    downloaded: true
+    path: "/mnt/d/Ibnu/seqfetch"
   server:
     transferred: false
     host: "lightning"
     path: null
 
 processing:
-  validated: false
-  fastq_tested: false
-  fastq_extracted: false
-  fastq_gz_ready: false
+  validated: true
+  fastq_tested: true
+  fastq_extracted: true
+  fastq_gz_ready: true
   adapters_removed: "unknown"
   quality_trimmed: "unknown"
   aligned: false
