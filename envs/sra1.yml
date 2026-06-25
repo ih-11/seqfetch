@@ -1,16 +1,19 @@
 name: sra
 channels:
   - conda-forge
-  - bioconda
   - defaults
+  - bioconda
 dependencies:
   - _openmp_mutex=4.5=20_gnu
+  - bzip2=1.0.8=h5eee18b_6
   - c-ares=1.34.6=hb03c661_0
   - ca-certificates=2026.6.17=hbd8a1cb_0
   - curl=8.20.0=hcf29cc6_0
+  - htslib=1.23=h566b1c6_0
   - keyutils=1.6.3=hb9d3cd8_0
   - krb5=1.22.2=ha1258a1_0
   - libcurl=8.20.0=hcf29cc6_0
+  - libdeflate=1.22=h5eee18b_0
   - libedit=3.1.20250104=pl5321h7949ede_0
   - libev=4.33=hd590300_2
   - libgcc=15.2.0=he0feb66_19
@@ -60,6 +63,7 @@ dependencies:
   - perl-xml-namespacesupport=1.12=pl5321hdfd78af_1
   - perl-xml-sax=1.02=pl5321hdfd78af_1
   - perl-xml-sax-base=1.09=pl5321hdfd78af_1
+  - samtools=1.23=h96c455f_0
   - seqtk=1.5=h577a1d6_1
   - sra-tools=3.4.1=2_linux_64
   - zstd=1.5.7=hb78ec9c_6
